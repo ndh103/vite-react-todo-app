@@ -8,8 +8,8 @@ I found out about Vite and I wanted to have a boilerplate for the technologies t
 
 ## Installation
 
-Clone the repo and run `yarn install`
+Clone the repo and run `npm install`
 
 ## Start
 
-After the successfull installation of the packages: `yarn dev`
+After the successfull installation of the packages: `npm run dev`
