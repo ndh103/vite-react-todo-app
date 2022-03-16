@@ -16,7 +16,7 @@ After the successfull installation of the packages: `npm run dev`
 
 - [x] Vite, Eslint, Prettier
 - [x] Pre-commit check using "pre-commit"
-- [x] ChakraUI
-- [ ] Making api call using Axios
-- [ ] Fake http api result using Mirage
+- [x] ChakraUI + emotion (CSS in JS)
+- [ ] Axios
+- [ ] Mirage - mock http api result
 - [ ] Implement todo features
