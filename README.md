@@ -20,7 +20,8 @@ After the successfull installation of the packages: `npm run dev`
 - [x] Pre-commit check using "pre-commit"
 - [x] ChakraUI + emotion (CSS in JS)
   - Enable using @emotion/react using guides from [tutorial](https://dev.to/glocore/configure-emotion-with-your-vite-react-project-7jl?signin=true)
-- [ ] Routing using [react router](https://reactrouter.com/)
+- [x] Routing using [react router](https://reactrouter.com/)
+- [x] Reponsive layout with sidebar, try on [codesandbox](https://codesandbox.io/s/chakra-ui-responsive-sidebar-forked-sd7thu?file=/src/components/Sidebar/index.tsx)
 - [ ] Axios
 - [ ] Mirage - mock http api result
 - [ ] Implement todo features
