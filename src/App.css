@@ -1,5 +1,16 @@
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
