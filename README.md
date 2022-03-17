@@ -20,7 +20,7 @@ After the successfull installation of the packages: `npm run dev`
 - [x] Pre-commit check using "pre-commit"
 - [x] ChakraUI + emotion (CSS in JS)
   - Enable using @emotion/react using guides from [tutorial](https://dev.to/glocore/configure-emotion-with-your-vite-react-project-7jl?signin=true)
-- [ ] Routing using [reach router](https://reach.tech/router/)
+- [ ] Routing using [react router](https://reactrouter.com/)
 - [ ] Axios
 - [ ] Mirage - mock http api result
 - [ ] Implement todo features

@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+import { BrowserRouter } from 'react-router-dom'
+
 import App from './App'
 
 // Chakra - Extend the theme to include custom colors, fonts, etc
@@ -17,9 +19,11 @@ const theme = extendTheme({ colors })
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      <App />
-    </ChakraProvider>
+    <BrowserRouter>
+      <ChakraProvider theme={theme} resetCSS>
+        <App />
+      </ChakraProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )
