@@ -59,6 +59,10 @@
           }
         ]
       }
+    ],
+    "react/require-default-props": [
+      "error",
+      { "forbidDefaultForRequired": false, "ignoreFunctionalComponents": true }
     ]
   },
   "settings": {

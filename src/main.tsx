@@ -2,20 +2,22 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { BrowserRouter } from 'react-router-dom'
-
 import App from './App'
 
-// Chakra - Extend the theme to include custom colors, fonts, etc
-const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
-  },
-}
+// ChakraUI - Customize the breakpoints
+const breakpoints = createBreakpoints({
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px',
+  '2xl': '1536px',
+})
 
-const theme = extendTheme({ colors })
+// ChakraUI -  Extend the theme
+const theme = extendTheme({ breakpoints })
 
 ReactDOM.render(
   <React.StrictMode>
