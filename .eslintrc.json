@@ -44,7 +44,22 @@
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "import/prefer-default-export": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": [
+      "error",
+      {
+        "forbid": [
+          {
+            "char": ">",
+            "alternatives": ["&gt;"]
+          },
+          {
+            "char": "}",
+            "alternatives": ["&#125;"]
+          }
+        ]
+      }
+    ]
   },
   "settings": {
     // setting for the plugin eslint-import-resolver-typescript
