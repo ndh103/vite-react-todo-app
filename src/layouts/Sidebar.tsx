@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Drawer,
   DrawerOverlay,
   DrawerCloseButton,
@@ -18,10 +17,9 @@ interface Props {
 
 function SidebarContent() {
   return (
-    <VStack>
-      <Button w="100%">Home</Button>
-      <Button w="100%">About</Button>
-      <Button w="100%">Contact</Button>
+    <VStack align="left">
+      <Box layerStyle="box.sidebar-item">Home</Box>
+      <Box layerStyle="box.sidebar-item"> About</Box>
     </VStack>
   )
 }
@@ -37,7 +35,7 @@ function Sidebar({ isSideBarOpen, onClose }: Props) {
         p={5}
         top={0}
         h="100%"
-        bg="#dfdfdf"
+        bg="gray.50"
         display={{ base: 'none', lg: 'block' }}
       >
         <SidebarContent />
