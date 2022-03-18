@@ -1,26 +1,23 @@
-import { Box, Flex } from '@chakra-ui/react'
 import { useState } from 'react'
+import { AppShell } from '@mantine/core'
 import { Outlet } from 'react-router-dom'
-import Header from './Header'
-import Sidebar from './Sidebar'
+import AppHeader from './AppHeader'
+import AppSidebar from './AppSidebar'
 
 function MainLayout() {
-  const [isSidebarOpen, setSidebarOpen] = useState(false)
-
-  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen)
+  const [opened, setOpened] = useState(false)
 
   return (
-    <Flex flexDirection="column" height="100%" minHeight="100%">
-      <Header onShowSidebar={toggleSidebar} />
-
-      <Flex height="100%" flexDirection="row">
-        <Sidebar onClose={toggleSidebar} isSideBarOpen={isSidebarOpen} />
-
-        <Box flexGrow="1" height="100%" overflow="auto">
-          <Outlet />
-        </Box>
-      </Flex>
-    </Flex>
+    <AppShell
+      // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
+      navbarOffsetBreakpoint="md"
+      // fixed prop on AppShell will be automatically added to Header and Navbar
+      fixed
+      navbar={<AppSidebar opened={opened} />}
+      header={<AppHeader opened={opened} setOpened={setOpened} />}
+    >
+      <Outlet />
+    </AppShell>
   )
 }
 
