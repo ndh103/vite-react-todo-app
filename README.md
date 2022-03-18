@@ -20,7 +20,6 @@ After the successfull installation of the packages: `npm run dev`
 - [x] Pre-commit check using "pre-commit"
 - [x] Routing using [react router](https://reactrouter.com/)
 - [x] Using [Mantine](https://mantine.dev/) as React Component Library
-- [x] Reponsive layout with sidebar (written using Mantine [AppShell](https://mantine.dev/core/app-shell/))
-- [] Axios
-- [] Mirage - mock http api result
-- [] Implement todo features
+- [ ] Axios
+- [ ] Mirage - mock http api result
+- [ ] Implement todo features

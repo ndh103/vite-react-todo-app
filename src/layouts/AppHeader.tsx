@@ -12,10 +12,17 @@ interface Props {
 }
 
 function AppHeader({ opened, setOpened }: Props) {
-  const theme = useMantineTheme()
+  const mantineTheme = useMantineTheme()
 
   return (
-    <Header height={70} p="md">
+    <Header
+      height={70}
+      p="md"
+      sx={(theme) => ({
+        backgroundColor: theme.colors.orange[4],
+        color: 'white',
+      })}
+    >
       {/* Handle other responsive styles with MediaQuery component or createStyles function */}
       <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
@@ -23,12 +30,12 @@ function AppHeader({ opened, setOpened }: Props) {
             opened={opened}
             onClick={() => setOpened(!opened)}
             size="sm"
-            color={theme.colors.gray[6]}
+            color={mantineTheme.colors.gray[6]}
             mr="xl"
           />
         </MediaQuery>
 
-        <Text>Application header</Text>
+        <Text>Vite React Todo App</Text>
       </div>
     </Header>
   )
