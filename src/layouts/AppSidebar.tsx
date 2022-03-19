@@ -1,50 +1,25 @@
-import {
-  CSSObject,
-  MantineTheme,
-  Navbar,
-  Text,
-  useMantineTheme,
-} from '@mantine/core'
-import {
-  Link,
-  LinkProps,
-  useMatch,
-  useResolvedPath,
-  PathMatch,
-} from 'react-router-dom'
+import { Navbar, Text } from '@mantine/core'
+import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom'
 
 interface Props {
   opened: boolean
+  setOpened: (opened: boolean) => void
 }
 
-const navItemStyle = (theme: MantineTheme): CSSObject => ({
-  padding: '5px 10px',
-  margin: '1px 10px',
-  borderRadius: '5px',
-
-  '&:hover': {
-    backgroundColor: theme.colors.gray[4],
-  },
-})
-
-const activeNavItemStyle = (
-  match: PathMatch<string> | null,
-  theme: MantineTheme
-) => ({
-  backgroundColor: match ? theme.colors.gray[4] : 'transparent',
-})
-
-function CustomNavLink({ children, to, ...props }: LinkProps) {
-  const mantineTheme = useMantineTheme()
+function CustomNavLink({ children, to, onClick, ...props }: LinkProps) {
   const resolved = useResolvedPath(to)
   const match = useMatch({ path: resolved.pathname, end: true })
 
+  const navItemStyle = `py-2 px-5 my-[1px] mx-1 rounded-lg hover:!bg-gray-500 ${
+    match ? 'bg-gray-400' : 'bg-transparent'
+  }`
+
   return (
     <Text
-      sx={navItemStyle}
+      className={navItemStyle}
       component={Link}
-      style={activeNavItemStyle(match, mantineTheme)}
       to={to}
+      onClick={onClick}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
@@ -53,7 +28,7 @@ function CustomNavLink({ children, to, ...props }: LinkProps) {
   )
 }
 
-function AppSidebar({ opened }: Props) {
+function AppSidebar({ opened, setOpened }: Props) {
   return (
     <Navbar
       p="md"
@@ -69,8 +44,12 @@ function AppSidebar({ opened }: Props) {
         backgroundColor: theme.colors.gray[0],
       })}
     >
-      <CustomNavLink to="/">Home</CustomNavLink>
-      <CustomNavLink to="/about">About</CustomNavLink>
+      <CustomNavLink to="/" onClick={() => setOpened(!opened)}>
+        Home
+      </CustomNavLink>
+      <CustomNavLink to="/about" onClick={() => setOpened(!opened)}>
+        About
+      </CustomNavLink>
     </Navbar>
   )
 }

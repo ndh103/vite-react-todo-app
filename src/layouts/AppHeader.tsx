@@ -15,23 +15,16 @@ function AppHeader({ opened, setOpened }: Props) {
   const mantineTheme = useMantineTheme()
 
   return (
-    <Header
-      height={70}
-      p="md"
-      sx={(theme) => ({
-        backgroundColor: theme.colors.orange[4],
-        color: 'white',
-      })}
-    >
+    <Header height={70} p="md" className="bg-primary text-primary-content">
       {/* Handle other responsive styles with MediaQuery component or createStyles function */}
-      <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
+      <div className="flex items-center h-full">
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
           <Burger
             opened={opened}
             onClick={() => setOpened(!opened)}
             size="sm"
-            color={mantineTheme.colors.gray[6]}
             mr="xl"
+            color={mantineTheme.colors['primary-content'][0]}
           />
         </MediaQuery>
 

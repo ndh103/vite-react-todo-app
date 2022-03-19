@@ -19,7 +19,11 @@ After the successfull installation of the packages: `npm run dev`
   - Using the [tutorial](https://javascript.plainenglish.io/setting-eslint-and-prettier-on-a-react-typescript-project-2021-22993565edf9)
 - [x] Pre-commit check using "pre-commit"
 - [x] Routing using [react router](https://reactrouter.com/)
-- [x] Using [Mantine](https://mantine.dev/) as React Component Library
+- [x] TailwindCSS as CSS Library
+- [x] [Mantine](https://mantine.dev/) as React Component Library
+  - [x] Override TailwindCSS and Mantine breakpoints to match
+  - [x] Add custom colors to both TailwindCSS and Mantine (color variants inspired from [DaisyUI Color](https://daisyui.com/docs/colors/) - theme Emeral)
+  - [ ] Override Mantine components to use custom theme color
 - [ ] Axios
 - [ ] Mirage - mock http api result
 - [ ] Implement todo features

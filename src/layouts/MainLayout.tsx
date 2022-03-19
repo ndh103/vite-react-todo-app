@@ -13,7 +13,7 @@ function MainLayout() {
       navbarOffsetBreakpoint="md"
       // fixed prop on AppShell will be automatically added to Header and Navbar
       fixed
-      navbar={<AppSidebar opened={opened} />}
+      navbar={<AppSidebar opened={opened} setOpened={setOpened} />}
       header={<AppHeader opened={opened} setOpened={setOpened} />}
     >
       <Outlet />
