@@ -10,8 +10,8 @@ function CustomNavLink({ children, to, onClick, ...props }: LinkProps) {
   const resolved = useResolvedPath(to)
   const match = useMatch({ path: resolved.pathname, end: true })
 
-  const navItemStyle = `py-2 px-5 my-[1px] mx-1 rounded-lg hover:!bg-neutral-400 ${
-    match ? 'bg-neutral-300' : 'bg-transparent'
+  const navItemStyle = `py-1 px-5 mx-1 rounded-md hover:!bg-neutral-200 ${
+    match ? 'bg-neutral-200' : 'bg-transparent'
   }`
 
   return (

@@ -3,11 +3,11 @@ import { TodoModel } from './todoModel'
 
 class TodoApi {
   static getTodos() {
-    return httpApi.get('todos').catch(() => null)
+    return httpApi.get('/api/todos').catch(() => null)
   }
 
   static addTodo(todo: TodoModel) {
-    return httpApi.post('todos', todo).catch(() => null)
+    return httpApi.post('/api/todos', todo).catch(() => null)
   }
 }
 

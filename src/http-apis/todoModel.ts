@@ -4,6 +4,7 @@ export enum TodoStatus {
 }
 
 export interface TodoModel {
+  id: number
   text: string
   status: TodoStatus
 }
