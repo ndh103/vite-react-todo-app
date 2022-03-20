@@ -6,7 +6,7 @@ function TodoHomePage() {
       <h1 className="text-3xl font-bold underline text-blue-400">
         Hello world!
       </h1>
-      <Button color="accent">Test default primary button</Button>
+      <Button color="primary">Primary button</Button>
       <div>
         The standard Lorem Ipsum passage, used since the 1500s "Lorem ipsum
         dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

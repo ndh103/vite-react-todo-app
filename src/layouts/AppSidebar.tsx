@@ -10,8 +10,8 @@ function CustomNavLink({ children, to, onClick, ...props }: LinkProps) {
   const resolved = useResolvedPath(to)
   const match = useMatch({ path: resolved.pathname, end: true })
 
-  const navItemStyle = `py-2 px-5 my-[1px] mx-1 rounded-lg hover:!bg-gray-500 ${
-    match ? 'bg-gray-400' : 'bg-transparent'
+  const navItemStyle = `py-2 px-5 my-[1px] mx-1 rounded-lg hover:!bg-neutral-400 ${
+    match ? 'bg-neutral-300' : 'bg-transparent'
   }`
 
   return (
@@ -41,7 +41,7 @@ function AppSidebar({ opened, setOpened }: Props) {
       // viewport size > theme.breakpoints.lg – width is 400px
       width={{ sm: 250, lg: 300 }}
       sx={(theme) => ({
-        backgroundColor: theme.colors.gray[0],
+        backgroundColor: theme.colors.neutral[0],
       })}
     >
       <CustomNavLink to="/" onClick={() => setOpened(!opened)}>

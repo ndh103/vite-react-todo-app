@@ -15,7 +15,7 @@ function AppHeader({ opened, setOpened }: Props) {
   const mantineTheme = useMantineTheme()
 
   return (
-    <Header height={70} p="md" className="bg-primary text-primary-content">
+    <Header height={70} p="md" className="bg-primary-600 text-white">
       {/* Handle other responsive styles with MediaQuery component or createStyles function */}
       <div className="flex items-center h-full">
         <MediaQuery largerThan="md" styles={{ display: 'none' }}>
@@ -24,7 +24,7 @@ function AppHeader({ opened, setOpened }: Props) {
             onClick={() => setOpened(!opened)}
             size="sm"
             mr="xl"
-            color={mantineTheme.colors['primary-content'][0]}
+            color={mantineTheme.colors.gray[0]}
           />
         </MediaQuery>
 
